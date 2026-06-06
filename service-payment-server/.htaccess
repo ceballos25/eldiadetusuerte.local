@@ -1,0 +1,8 @@
+# Proteger .env si vive dentro del docroot (public_html)
+<Files ".env">
+    Require all denied
+</Files>
+
+<Files ".env-*">
+    Require all denied
+</Files>

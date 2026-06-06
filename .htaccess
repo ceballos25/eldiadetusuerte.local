@@ -1,0 +1,43 @@
+<IfModule mod_headers.c>
+    # Sin CORS abierto: el panel y AJAX son mismo origen.
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ======================================================================
+# BLOQUEO CRÍTICO — OpenLiteSpeed / CyberPanel / Apache
+# ======================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Favicon en raíz (petición automática del navegador)
+    RewriteRule ^favicon\.ico$ favicon.php [L]
+
+    # .env en raíz o subcarpetas
+    RewriteRule (?:^|/)\.env - [F,L,NC]
+
+    # Git y control de versiones
+    RewriteRule (?:^|/)\.git - [F,L,NC]
+    RewriteRule (?:^|/)\.(gitignore|gitattributes|htaccess) - [F,L,NC]
+
+    # Backups
+    RewriteRule (?:^|/).*\.(bak|old|save|swp|tmp)$ - [F,L,NC]
+
+    # Carpetas sensibles
+    RewriteRule ^logs/ - [F,L,NC]
+    RewriteRule ^vendor/ - [F,L,NC]
+</IfModule>
+
+# Capa extra por nombre de archivo (compatibilidad Apache/OLS)
+<FilesMatch "^(\.env|composer\.(json|lock)|package(-lock)?\.json)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<Files 403.shtml>
+    Order allow,deny
+    Allow from all
+</Files>

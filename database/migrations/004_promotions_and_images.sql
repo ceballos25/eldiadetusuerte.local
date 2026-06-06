@@ -1,0 +1,2 @@
+-- Migration 004 (legacy): promociones eliminadas en 012; solo imágenes de sitio si aplica en instalaciones antiguas.
+-- Este archivo se mantiene por historial de migraciones ya aplicadas.

@@ -1,0 +1,30 @@
+EDTS — arquitectura (producción)
+
+CAPAS (PHP 8.x)
+- src/Domain        — entidades y contratos (ventas/tickets).
+- src/Application   — casos de uso (Ticketing, Settings, Reporting, Web checkout, Dashboard DB).
+- src/Infrastructure— PdoFactory, repositorios legacy, ejecutor SQL seguro de reportes.
+- src/Presentation  — controladores HTTP, middleware CSRF/RBAC, Router.
+- controllers/      — controladores legacy (ventas, clientes, rifas, …) + clase Db (lista blanca de tablas MySQL).
+- bootstrap/app.php — registra rutas POST del Router hacia controladores PSR-style.
+
+DATOS
+- 100 % negocio en MySQL vía PDO (PdoFactory + clase Db con lista blanca de tablas). No hay API REST interna ni externa para CRUD.
+- OpenPay es el único HTTP saliente de pago (curl a api.openpay.co), no sustituye la capa de datos.
+
+PUNTOS DE ENTRADA
+- index.php          — sitio público (landing/checkout visual).
+- dash.php           — login administradores → functions/login.php → front/dashboard.php.
+- front/*.php        — panel (sesión obligatoria salvo excepciones en $publicPages de config/config.php).
+- front/ajax/*.php   — mezcla: algunos pasan por bootstrap + Router (ventas.ajax, web.ajax, …); otros PHP clásico.
+
+SEGURIDAD
+- Sesión: httponly, secure y SameSite configurables por .env (SESSION_COOKIE_*).
+- Ventas AJAX: TicketSalesController con RBAC por acción y acciones públicas explícitas (p. ej. obtener_por_celular).
+- Archivos sensibles: .htaccess niega .env; .gitignore evita subir .env.
+
+DESPLIEGUE
+- DocumentRoot = raíz del proyecto (index.php, dash.php, assets/, front/). La carpeta public/ fue eliminada (duplicaba el router; no usar como raíz).
+- En assets/libs solo quedan builds mínimos (p. ej. dist/ de jquery, bootstrap, simplebar); ApexCharts va por CDN en dashboard.
+- Ejecutar database/migrations/ en MySQL antes de usar reportería/flags.
+- Copiar .env.example → .env y usar DEBUG_MODE=false, DISPLAY_ERRORS=false.

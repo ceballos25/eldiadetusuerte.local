@@ -1,0 +1,41 @@
+# Entorno — .env FUERA de public_html (ver config/envLoader.php)
+# Local/CyberPanel: ../.env  ($VH_ROOT/.env)
+../.env
+../.env.*
+!../.env.example
+.env
+.env.*
+!.env.example
+service-payment-server/.env
+
+# Dependencias de PHP
+
+# Logs privados fuera de public_html ($VH_ROOT/logs)
+../../logs/*
+!../../logs/.gitkeep
+
+# Datos privados fuera de public_html ($VH_ROOT/data)
+../../data/*
+!../../data/.gitkeep
+!../../data/cache/.gitkeep
+!../../data/locks/.gitkeep
+
+*.log
+
+# Cola local de webhooks Openpay (payment-server / reintentos)
+/openpay/queue/pending/*
+/openpay/queue/done/*
+!/openpay/queue/pending/.gitkeep
+!/openpay/queue/done/.gitkeep
+.phpunit.cache/
+.phpunit.result.cache
+
+# Comprobantes de transferencia (archivos subidos; conservar la carpeta en git)
+/uploads/comprobantes/*
+!/uploads/comprobantes/.gitkeep
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store

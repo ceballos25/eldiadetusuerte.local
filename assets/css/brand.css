@@ -1,0 +1,229 @@
+:root {
+    /* El Día de Tu Suerte — verde suerte + acento dorado */
+    --cr-primary: #16a34a;
+    --cr-primary-dark: #15803d;
+    --cr-primary-light: #4ade80;
+    --cr-primary-rgb: 22, 163, 74;
+
+    /* Paleta complementaria */
+    --cr-cream: #ecfdf5;
+    --cr-gold-light: #fde68a;
+    --cr-gold: #f59e0b;
+    --cr-gold-dark: #d97706;
+    --cr-gold-hover: #b45309;
+    --cr-gold-muted: #fffbeb;
+    --cr-gold-rgb: 245, 158, 11;
+
+    --cr-dark: #000000;
+    --cr-dark-soft: #1a1a1a;
+    --cr-dark-muted: #242424;
+    --cr-dark-border: var(--cr-gold-dark);
+    --cr-dark-rgb: 13, 13, 13;
+    --cr-black: var(--cr-dark);
+    --cr-white: #ffffff;
+
+    --cr-accent-green: #39cb7f;
+    --cr-accent-green-dark: #2da866;
+    --cr-accent-green-rgb: 57, 203, 127;
+    --cr-money: var(--cr-gold-dark);
+    --cr-success: var(--cr-primary-dark);
+    --cr-danger: #c45c5c;
+    --cr-danger-hover: #a04040;
+
+    --cr-font: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+    --cr-text-base: 1.0625rem;
+    --cr-leading: 1.6;
+
+    --cr-text: var(--cr-dark);
+    --cr-text-muted: #555555;
+    --cr-text-subtle: #777777;
+    --cr-text-on-dark: var(--cr-cream);
+    --cr-body-bg: #ffffff;
+    --cr-surface: #ffffff;
+    --cr-surface-soft: #ffffff;
+    --cr-surface-muted: #f7f7f7;
+    --cr-border: #e5e5e5;
+    --cr-border-gold: rgba(var(--cr-primary-rgb), 0.35);
+    --cr-border-strong: #d4d4d4;
+    --cr-input-border: #d0d0d0;
+
+    /* Fondo verde → texto claro. Fondo claro → texto oscuro o dorado. */
+    --cr-promo-bg: var(--cr-primary);
+    --cr-promo-text: var(--cr-white);
+    --cr-nav-bg: #000000;
+    --cr-nav-border: rgba(255, 255, 255, 0.1);
+    --cr-nav-text: #ffffff;
+    --cr-nav-badge-bg: rgba(22, 163, 74, 0.2);
+    --cr-nav-badge-text: #4ade80;
+    --cr-nav-logo-height: 52px;
+
+    --cr-hero-title: var(--cr-dark);
+    --cr-hero-accent: var(--cr-primary-dark);
+
+    --cr-num-libre-bg: #ffffff;
+    --cr-num-libre-text: var(--cr-dark);
+    --cr-num-libre-border: #d0d0d0;
+    --cr-num-selected-bg: #ffffff;
+    --cr-num-selected-text: #000000;
+    --cr-num-selected-border: #0D0D0D;
+    --cr-num-sold-bg: #eeeeee;
+    --cr-num-sold-text: #888888;
+    --cr-num-sold-border: #cccccc;
+    --cr-num-reserved-bg: #ffffff;
+    --cr-num-reserved-text: var(--cr-primary-dark);
+    --cr-num-reserved-border: var(--cr-primary);
+    --cr-num-premium-bg: var(--cr-primary);
+    --cr-num-premium-text: var(--cr-white);
+    --cr-num-premium-border: var(--cr-primary-dark);
+    --cr-num-bg: var(--cr-num-libre-bg);
+    --cr-num-text: var(--cr-num-libre-text);
+    --cr-num-border: 2px solid var(--cr-num-libre-border);
+    --cr-num-radius: 10px;
+    --cr-num-min-size: 48px;
+    --cr-num-hover-bg: var(--cr-gold-muted);
+    --cr-num-hover-border: var(--cr-primary);
+    --cr-num-active-bg: var(--cr-num-selected-bg);
+    --cr-num-active-text: var(--cr-num-selected-text);
+    --cr-num-active-border: var(--cr-num-selected-border);
+    --cr-num-shadow-active: 0 2px 8px rgba(13, 13, 13, 0.14);
+    --cr-chip-bg: var(--cr-num-selected-bg);
+    --cr-chip-text: var(--cr-num-selected-text);
+    --cr-chip-border: var(--cr-num-selected-border);
+    --cr-chip-border-style: solid;
+    --cr-chip-radius: var(--cr-num-radius);
+    --cr-chip-sold-mark: var(--cr-num-sold-border);
+    --cr-chip-border-width: 2px;
+    --cr-chip-font-weight: 700;
+    --cr-chip-font-size: 1rem;
+    --cr-chip-padding: 0.45rem 0.65rem;
+    --cr-chip-min-width: 2.875rem;
+    --cr-chip-lg-min-width: 3.375rem;
+    --cr-chip-lg-height: 3rem;
+    --cr-chip-lg-font-size: 1.0625rem;
+    --cr-chip-lg-padding: 0 0.75rem;
+    --cr-chip-lg-shadow: 0 1px 4px rgba(13, 13, 13, 0.06);
+
+    --cr-pack-bg: #ffffff;
+    --cr-pack-text: var(--cr-dark);
+    --cr-pack-border: 2px solid var(--cr-border);
+    --cr-pack-radius: 14px;
+    --cr-pack-shadow: 0 1px 4px rgba(13, 13, 13, 0.05);
+    --cr-pack-hover-border: var(--cr-primary);
+    --cr-pack-hover-shadow: 0 4px 12px rgba(13, 13, 13, 0.07);
+    --cr-pack-selected-bg: var(--cr-gold-muted);
+    --cr-pack-selected-text: var(--cr-dark);
+    --cr-pack-selected-border: var(--cr-primary);
+    --cr-pack-selected-shadow: 0 0 0 3px rgba(var(--cr-primary-rgb), 0.25);
+
+    --cr-pack-badge-bg: var(--cr-gold);
+    --cr-pack-badge-text: var(--cr-dark);
+    --cr-pack-precio-final: var(--cr-gold-dark);
+    --cr-pack-precio-normal: var(--cr-text-muted);
+
+    --cr-qty-badge-bg: var(--cr-primary-dark);
+    --cr-qty-badge-text: var(--cr-white);
+    --cr-qty-badge-border: var(--cr-primary-dark);
+
+    --cr-progress-track: #eeeeee;
+    --cr-progress-fill: var(--cr-primary);
+    --cr-progress-glow: transparent;
+    --cr-progress-text: var(--cr-white);
+    --cr-progress-carrera-track: #eeeeee;
+    --cr-progress-carrera-fill: var(--cr-primary);
+
+    --cr-btn-height: 52px;
+    --cr-btn-height-sm: 48px;
+    --cr-btn-dark-bg: var(--cr-dark);
+    --cr-btn-dark-text: var(--cr-white);
+    --cr-btn-warning-bg: var(--cr-primary);
+    --cr-btn-warning-text: var(--cr-white);
+    --cr-btn-pay-bg: var(--cr-primary);
+    --cr-btn-pay-text: var(--cr-white);
+    --cr-btn-pay-hover: var(--cr-primary-dark);
+
+    --cr-footer-bg: var(--cr-dark);
+    --cr-footer-heading: var(--cr-primary-light);
+    --cr-footer-text: #ffffff;
+    --cr-footer-text-muted: #aaaaaa;
+    --cr-footer-divider: rgba(255, 255, 255, 0.15);
+
+    --cr-cart-bg: #ffffff;
+    --cr-cart-border: var(--cr-border);
+    --cr-cart-price: var(--cr-primary-dark);
+    --cr-cart-count-bg: var(--cr-gold-muted);
+    --cr-cart-count-text: var(--cr-dark);
+    --cr-ticket-bg: var(--cr-gold-muted);
+    --cr-ticket-text: var(--cr-dark);
+    --cr-ticket-border: var(--cr-primary-dark);
+    --cr-prize-icon-bg: var(--cr-gold-muted);
+
+    --cr-admin-bg: #f8f9fa;
+    --cr-admin-surface: var(--cr-white);
+    --cr-admin-surface-soft: #fafbfc;
+    --cr-admin-surface-hover: #f4f6f8;
+    --cr-admin-surface-muted: #f3f4f6;
+    --cr-admin-border: #eef0f2;
+    --cr-admin-border-alt: #e9ecef;
+    --cr-admin-border-light: #f1f3f5;
+    --cr-admin-text: #212529;
+    --cr-admin-text-strong: #343a40;
+    --cr-admin-text-secondary: #495057;
+    --cr-admin-text-muted: #6c757d;
+    --cr-admin-text-subtle: #868e96;
+    --cr-admin-text-faint: #adb5bd;
+    --cr-admin-text-slate: #64748b;
+    --cr-admin-text-dark: #1e293b;
+    --cr-admin-accent: var(--cr-primary);
+    --cr-admin-accent-soft: var(--cr-gold-muted);
+    --cr-admin-accent-border: rgba(var(--cr-primary-rgb), 0.35);
+    --cr-admin-accent-highlight: rgba(var(--cr-primary-rgb), 0.1);
+    --cr-admin-warning: #ffc107;
+    --cr-admin-warning-text: #664d03;
+    --cr-admin-warning-muted: #fff3cd;
+    --cr-admin-row-hover: #eef1f4;
+    --cr-admin-info-bg: #f0f7ff;
+    --cr-admin-info-text: #4a7ab5;
+    --cr-admin-success-bg: #eef8f1;
+    --cr-admin-success-bg-soft: #ecfdf5;
+    --cr-admin-success-border: #bbf7d0;
+    --cr-admin-success-text: #3d7a55;
+    --cr-admin-whatsapp: #25d366;
+    --cr-admin-shadow-sm: 0 1px 4px rgba(15, 23, 42, 0.04);
+    --cr-admin-shadow-card: 0 2px 8px rgba(15, 23, 42, 0.06);
+    --cr-admin-focus-ring: rgba(var(--cr-primary-rgb), 0.2);
+    --cr-admin-overlay: rgba(255, 255, 255, 0.92);
+    --cr-admin-shadow-md: 0 1px 4px rgba(0, 0, 0, 0.12);
+    --cr-admin-success-highlight: rgba(var(--cr-accent-green-rgb), 0.12);
+    --cr-admin-highlight-gradient: linear-gradient(135deg, var(--cr-gold-muted) 0%, rgba(var(--cr-primary-rgb), 0.15) 100%);
+    --cr-progress-border: rgba(var(--cr-primary-rgb), 0.25);
+
+    --cr-space-xs: 4px;
+    --cr-space-sm: 8px;
+    --cr-space-md: 16px;
+    --cr-space-lg: 24px;
+    --cr-space-xl: 32px;
+    --cr-space-2xl: 48px;
+
+    --cr-radius-sm: 8px;
+    --cr-radius-md: 12px;
+    --cr-radius-lg: 16px;
+    --cr-radius-xl: 20px;
+    --cr-radius-pill: 999px;
+    --cr-shadow-xs: 0 1px 3px rgba(13, 13, 13, 0.04);
+    --cr-shadow-sm: 0 2px 8px rgba(13, 13, 13, 0.06);
+    --cr-shadow-md: 0 4px 16px rgba(13, 13, 13, 0.07);
+    --cr-shadow-lg: 0 8px 28px rgba(13, 13, 13, 0.08);
+    --cr-shadow-cart: 0 -2px 16px rgba(13, 13, 13, 0.08);
+    --cr-shadow-ticket: 0 1px 3px rgba(13, 13, 13, 0.08);
+    --cr-shadow-gold-sm: 0 3px 10px rgba(var(--cr-primary-rgb), 0.3);
+    --cr-shadow-gold-md: 0 4px 14px rgba(var(--cr-primary-rgb), 0.35);
+    --cr-shadow-gold-ring: 0 0 0 3px rgba(var(--cr-primary-rgb), 0.22);
+    --cr-shadow-inset-light: inset 0 1px 2px rgba(13, 13, 13, 0.04);
+    --cr-text-shadow: none;
+
+    --cr-transition-fast: 0.15s ease;
+    --cr-transition-normal: 0.25s ease;
+
+    --gold: var(--cr-primary);
+    --dark-bg: var(--cr-dark);
+}
