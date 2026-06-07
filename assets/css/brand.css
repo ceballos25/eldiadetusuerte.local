@@ -79,7 +79,8 @@
     --cr-num-text: var(--cr-num-libre-text);
     --cr-num-border: 2px solid var(--cr-num-libre-border);
     --cr-num-radius: 10px;
-    --cr-num-min-size: 48px;
+    --cr-num-min-size: 52px;
+    --cr-num-cell-min: 4.5rem;
     --cr-num-hover-bg: var(--cr-gold-muted);
     --cr-num-hover-border: var(--cr-primary);
     --cr-num-active-bg: var(--cr-num-selected-bg);
@@ -94,9 +95,9 @@
     --cr-chip-sold-mark: var(--cr-num-sold-border);
     --cr-chip-border-width: 2px;
     --cr-chip-font-weight: 700;
-    --cr-chip-font-size: 1rem;
-    --cr-chip-padding: 0.45rem 0.65rem;
-    --cr-chip-min-width: 2.875rem;
+    --cr-chip-font-size: 0.8125rem;
+    --cr-chip-padding: 0.35rem 0.25rem;
+    --cr-chip-min-width: var(--cr-num-cell-min);
     --cr-chip-lg-min-width: 3.375rem;
     --cr-chip-lg-height: 3rem;
     --cr-chip-lg-font-size: 1.0625rem;

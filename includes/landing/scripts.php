@@ -10,5 +10,5 @@
 <script>window.PUBLIC_CSRF_TOKEN = <?= json_encode($_SESSION['csrf_token'] ?? '', JSON_UNESCAPED_UNICODE) ?>;</script>
 <script src="assets/js/settings.js?v=20"></script>
 <script src="<?= htmlspecialchars(ASSETS_URL . '/js/cr-grilla-numeros.js', ENT_QUOTES, 'UTF-8') ?>?v=6"></script>
-<script src="assets/js/frontend.js?v=55"></script>
+<script src="assets/js/frontend.js?v=56"></script>
 <script src="<?= htmlspecialchars(ASSETS_URL . '/js/buscarTickets.js', ENT_QUOTES, 'UTF-8') ?>?v=5"></script>

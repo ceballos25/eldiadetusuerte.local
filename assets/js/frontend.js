@@ -1305,7 +1305,7 @@ function renderCheckoutSheetNumeros() {
     if (esRifaManual() && nums.length) {
         el.innerHTML = `
             <span class="text-muted small d-block mb-2">Nros seleccionados</span>
-            <div class="d-flex flex-wrap gap-1">${nums.map((n) => landingNumeroChipHtml(n)).join('')}</div>`;
+            <div class="cr-numeros-grid">${nums.map((n) => landingNumeroChipHtml(n)).join('')}</div>`;
         return;
     }
 
